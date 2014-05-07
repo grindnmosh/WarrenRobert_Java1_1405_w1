@@ -56,8 +56,7 @@ public class MainActivity extends Activity {
 		
 		TextView header = new TextView(this);
 		header.setTextColor(Color.RED);
-		header.setText("Welcome to MadLib. Please fill out the form below and when you click " +
-				"\"MadLib Me\" it will show you your story.");
+		header.setText("Welcome to MadLib. Please fill out the form below and when you click \"MadLib Me\" it will show you your story.");
 		ll.addView(header);
 		
 		ScrollView sc = new ScrollView(getApplicationContext());
