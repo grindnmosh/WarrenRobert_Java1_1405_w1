@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN); 
+		
 		
 		setContentView(buildForm());
 		
@@ -62,6 +62,7 @@ public class MainActivity extends Activity {
 		ScrollView sc = new ScrollView(getApplicationContext());
 	    sc.setLayoutParams(lp);
 
+		
 		ArrayList<View> allViews = new ArrayList<View>();
 
 		TextView lbl1 = new TextView(this);

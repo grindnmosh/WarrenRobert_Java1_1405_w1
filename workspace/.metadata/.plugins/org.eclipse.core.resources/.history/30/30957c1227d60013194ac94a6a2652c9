@@ -15,9 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -38,7 +36,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN); 
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 		
 		setContentView(buildForm());
 		
@@ -52,15 +50,10 @@ public class MainActivity extends Activity {
 		lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 		ll.setLayoutParams(lp);
 
-		
-		
 		TextView header = new TextView(this);
 		header.setTextColor(Color.RED);
 		header.setText("Welcome to MadLib. Please fill out the form below and when you click \"MadLib Me\" it will show you your story.");
 		ll.addView(header);
-		
-		ScrollView sc = new ScrollView(getApplicationContext());
-	    sc.setLayoutParams(lp);
 
 		ArrayList<View> allViews = new ArrayList<View>();
 
@@ -264,15 +257,20 @@ public class MainActivity extends Activity {
 			}
 		}
 
-		
+		/*ll.addView(form1);
+		ll.addView(form2);
+		ll.addView(form3);
+		ll.addView(form4);
+		ll.addView(form5);
+		ll.addView(form6);
+		ll.addView(form7);
+		ll.addView(form8);*/
 		ll.addView(lib);
 
 
 		ll.addView(madlib);
-		
-		sc.addView(ll);
 
-		v = sc;
+		v = ll;
 
 		return v;
 	}

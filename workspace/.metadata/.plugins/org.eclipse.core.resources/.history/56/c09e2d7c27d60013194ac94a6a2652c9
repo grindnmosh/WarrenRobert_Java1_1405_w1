@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN); 
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 		
 		setContentView(buildForm());
 		
@@ -52,8 +52,6 @@ public class MainActivity extends Activity {
 		lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 		ll.setLayoutParams(lp);
 
-		
-		
 		TextView header = new TextView(this);
 		header.setTextColor(Color.RED);
 		header.setText("Welcome to MadLib. Please fill out the form below and when you click \"MadLib Me\" it will show you your story.");
@@ -62,6 +60,7 @@ public class MainActivity extends Activity {
 		ScrollView sc = new ScrollView(getApplicationContext());
 	    sc.setLayoutParams(lp);
 
+		
 		ArrayList<View> allViews = new ArrayList<View>();
 
 		TextView lbl1 = new TextView(this);
