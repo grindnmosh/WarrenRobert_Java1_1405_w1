@@ -1,0 +1,40 @@
+!SESSION 2014-05-06 16:53:44.085 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -data /Users/1LoveCyn/Desktop/WarrenRobert_Java1_1405_w1 -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-05-06 16:53:47.883
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-05-06 16:54:06.192 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-05-06 16:54:10.066
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-05-06 16:55:32.851 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -data /Users/1LoveCyn/Desktop/WarrenRobert_Java1_1405_w1 -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-05-06 16:55:36.870
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-05-06 16:55:52.340 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -data /Users/1LoveCyn/Desktop/WarrenRobert_Java1_1405_w1 -product com.android.ide.eclipse.adt.package.product -keyring /Users/1LoveCyn/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-05-06 16:55:55.252
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
