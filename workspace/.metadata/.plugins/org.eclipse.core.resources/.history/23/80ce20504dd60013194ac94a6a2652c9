@@ -215,7 +215,7 @@ public class MainActivity extends Activity {
 				
 				//conditional to convert to a float or leave a string based on user input.
 				if (edit7.getText().length() != 0) {
-					number = Integer.parseInt(edit7.getText().toString()) / 2.0f; // mathematical equation with the float var
+					number = Integer.parseInt(edit7.getText().toString()) / 2.0f;
 				}
 				else {
 
