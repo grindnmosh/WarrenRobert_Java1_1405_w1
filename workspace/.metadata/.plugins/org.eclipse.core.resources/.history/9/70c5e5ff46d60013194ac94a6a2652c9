@@ -15,22 +15,22 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	//variables 
-	String name; //string var requirement
+	String name;
 	String profession;
 	String adjective;
 	String action;
 	String body;
 	String feeling;
-	float number; //int or float var requirement
+	float number;
 	String time;
-	boolean running; //boolean var requirement
+	boolean running;
 	LinearLayout ll;
 	LinearLayout.LayoutParams lp;
 
@@ -38,41 +38,33 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//keep keyboard from auto populating
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN); 
 		
-		//set content view from function
 		setContentView(buildForm());
 		
 	}
 
-	//function to build form
 	private View buildForm() {
-		
-		//main Linear view setup
 		View v = new View(this);
 		ll = new LinearLayout(this);
-		ll.setOrientation(LinearLayout.VERTICAL);// create main linear layout running vertical
+		ll.setOrientation(LinearLayout.VERTICAL);
 		ll.setBackgroundColor(Color.WHITE);
 		lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 		ll.setLayoutParams(lp);
 
-		//heading text above form with instructions
+		
+		
 		TextView header = new TextView(this);
 		header.setTextColor(Color.RED);
 		header.setText("Welcome to MadLib. Please fill out the form below and when you click " +
 				"\"MadLib Me\" it will show you your story.");
-		//add to top of view
 		ll.addView(header);
 		
-		//create scroll view to envelop main vie so you can scroll through when keyboard is up
 		ScrollView sc = new ScrollView(getApplicationContext());
 	    sc.setLayoutParams(lp);
-	    
-	    //create array list for the views
+
 		ArrayList<View> allViews = new ArrayList<View>();
 
-		//create the 8 text views, just create not load
 		TextView lbl1 = new TextView(this);
 		lbl1.setText("Person's Name");
 
@@ -112,22 +104,21 @@ public class MainActivity extends Activity {
 
 		final EditText edit7 = new EditText(this);
 		edit7.setHint("Enter a Number");
-		edit7.setInputType(InputType.TYPE_CLASS_PHONE); // make sure a number only keyboard loads
+		edit7.setInputType(InputType.TYPE_CLASS_PHONE);
 
 		TextView lbl8 = new TextView(this);
 		lbl8.setText("Period of Time");
 
 		final EditText edit8 = new EditText(this);
 		edit8.setHint("Enter a Period of Time");
-		
-		//create 8 individual linear layouts running HORIZONTAL for each item
+
 		LinearLayout form1 = new LinearLayout(this);
 		form1.setOrientation(LinearLayout.HORIZONTAL);
 		form1.setLayoutParams(lp);
 
 		form1.addView(lbl1);
 		form1.addView(edit1);
-		allViews.add(form1);// This code adds each form to array
+		allViews.add(form1);
 
 		LinearLayout form2 = new LinearLayout(this);
 		form2.setOrientation(LinearLayout.HORIZONTAL);
@@ -148,8 +139,7 @@ public class MainActivity extends Activity {
 		LinearLayout form4 = new LinearLayout(this);
 		form4.setOrientation(LinearLayout.HORIZONTAL);
 		form4.setLayoutParams(lp);
-		
-		//create check box for boolean check
+
 		form4.addView(cb);
 		allViews.add(form4);
 
@@ -184,44 +174,34 @@ public class MainActivity extends Activity {
 		form8.addView(lbl8);
 		form8.addView(edit8);
 		allViews.add(form8);
-		
-		// add the textview that will diplay the completed madlib
+
 		final TextView madlib = new TextView(this);
 		madlib.setLayoutParams(lp);
-		
-		//create button
+
 		Button lib = new Button(this);
 		lib.setText("MadLib Me");
-		
-		//set onClick event
 		lib.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//set onClick variables
 				name = edit1.getText().toString();
 				profession = edit2.getText().toString();
 				adjective = edit3.getText().toString();
-				body = edit5.getText().toString();
-				feeling = edit6.getText().toString();
-				time = edit8.getText().toString();
-				
-				//set conditional result for boolean check on check box and return appropriate var definition
 				if (running) {
 					action = "go running";
 				}
 				else {
 					action = "not go running";
 				}
-				
-				//conditional to convert to a float or leave a string based on user input.
+				body = edit5.getText().toString();
+				feeling = edit6.getText().toString();
 				if (edit7.getText().length() != 0) {
 					number = Integer.parseInt(edit7.getText().toString()) / 2.0f;
 				}
 				else {
 
 				}
-				
-				//run a check for input in the 7 edit text fields
+				time = edit8.getText().toString();
+
 				if (edit1.getText().length() == 0) {
 
 					edit1.setError("please input name");
@@ -257,7 +237,7 @@ public class MainActivity extends Activity {
 
 				}
 				else {
-					// remove error messages when all fields filled out.
+
 					edit1.setError(null);
 					edit2.setError(null);
 					edit3.setError(null);
@@ -265,8 +245,6 @@ public class MainActivity extends Activity {
 					edit6.setError(null);
 					edit7.setError(null);
 					edit8.setError(null);
-					
-					//set the madlib text in the text view with user inputed data
 					madlib.setText("Hi, My Name is " + name + 
 							" and I am a " + profession + 
 							" who has a(n) " + adjective + 
@@ -280,24 +258,21 @@ public class MainActivity extends Activity {
 				}
 			} 
 		});
-		
-		//loop through created form linear layouts into main view
+
 		if (allViews.size() > 0) {
 			for(View lines : allViews) {
 				ll.addView(lines);
 			}
 		}
 
-		// add button to main view
+		
 		ll.addView(lib);
 
-		// add madlib result to main view
+
 		ll.addView(madlib);
 		
-		//add main view inside scroll view
 		sc.addView(ll);
 
-		//define the view variable to return
 		v = sc;
 
 		return v;
