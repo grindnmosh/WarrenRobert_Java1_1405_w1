@@ -3,6 +3,7 @@
 //Term 1405
 
 package com.grinddesign.Java1.j1demo.j1demo;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -11,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.grindesign.listView.FeedMe;
 
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 
 
         //spinner adapter
-        ArrayAdapter choicesAdapter = new ArrayAdapter(twitCon, android.R.layout.simple_spinner_item, choiceItems);
+        ArrayAdapter<String> choicesAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_spinner_item, choiceItems);
 
         //use UI Spinner and load it
         s.setAdapter(choicesAdapter);

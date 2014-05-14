@@ -4,21 +4,23 @@ package com.grindesign.listView;
 //Java 1
 //Term 1405
 
-/**
- * Created by 1LoveCyn on 5/13/14.
- */
-
-
 
 public class enumFile {
-    public enum Feeds{feed, dates }
-
-    /*private String posting;
+/*  public enum Feeds{feed, dates }
+    public enum Feeds {feed1, feed2, feed3, feed4, feed5, feed6};
+    private String posting;
     private String dated;
 
-    private feeding(String posting, String dated) {
-        this.posting = posting;
-        this.dated = dated;
+    private feeding(String feed, String dates) {
+        this.posting = feed;
+        this.dated = dates;
+        public enum feed1( "Going to dinner at Subway", "5/11/2014 05:30 PM"),
+        public enum feed2("Going to dinner at Subway", "5/11/2014 05:30 PM");
+        public enum feed3("Going to dinner at Subway", "5/11/2014 05:30 PM");
+        public enum feed4("Going to dinner at Subway", "5/11/2014 05:30 PM");
+        public enum feed5("Going to dinner at Subway", "5/11/2014 05:30 PM");
+        public enum feed6("Going to dinner at Subway", "5/11/2014 05:30 PM");
+
     }
 
 
@@ -32,6 +34,7 @@ public class enumFile {
 
     public enumFile() {
 
+        feed1 = new enumFile("Going to dinner at Subway", "5/11/2014 05:30 PM");
     }*/
 
 
