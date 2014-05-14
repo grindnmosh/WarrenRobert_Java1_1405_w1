@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
                     ArrayAdapter<String> mainListAdapter;
                     mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followerItems);
                     lv.setAdapter(mainListAdapter);
-                    Toast.makeText(twitCon, "Here's Your " + choiceItems[position], Toast.LENGTH_LONG).show();
+                    fm.Toasty("Here's Your " + choiceItems[position]);
                 }
                 else if (choiceItems[position].equals("Following"))
                 {
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
                     mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followingItems
                     );
                     lv.setAdapter(mainListAdapter);
-                    Toast.makeText(twitCon, "Who You Are " + choiceItems[position], Toast.LENGTH_LONG).show();
+                    fm.Toasty("Who You Are " + choiceItems[position]);
                 }
             }
 

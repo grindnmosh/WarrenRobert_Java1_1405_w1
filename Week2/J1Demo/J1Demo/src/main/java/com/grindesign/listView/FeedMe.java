@@ -15,8 +15,10 @@ import org.json.JSONObject;
 
 
 public class FeedMe {
-        //feed1("eating cereal", "5/11/14 05:10 PM"),
-        //feed2("going to gym", "5/11/14 07:30 PM")
+
+        //feeding("Going to dinner at Subway", "5/11/2014 05:30 PM"),
+        //dates("5/11/2014 05:30 PM", "5/11/2014 05:30 PM");
+
 
 
 

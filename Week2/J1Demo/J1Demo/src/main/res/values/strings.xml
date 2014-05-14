@@ -17,18 +17,21 @@
     </string-array>
 
     <string-array name="sampleFeed_array">
-        <item >"Going to dinner at Subway
-            5/11/2014 05:30 PM</item>
-        <item >Going to the Gym
-            5/11/2014 07:30 PM</item>
-        <item >Homework Grind
-            5/12/2014 07:38 AM</item>
-        <item >Struggling with Enums and Classes
-            5/13/2014 07:06 AM</item>
-        <item >OMG the season finale of S.H.I.E.L.D. was amazing
-            5/13/2014 09:33 PM</item>
-        <item >Date Night
-            5/14/2014 04:33 PM</item>
+        <item >Going to dinner at Subway</item>
+        <item >Going to the Gym</item>
+        <item >Homework Grind</item>
+        <item >Struggling with Enums and Classes</item>
+        <item >OMG the season finale of S.H.I.E.L.D. was amazing</item>
+        <item >Date Night</item>
+    </string-array>
+
+    <string-array name="sampleDate_array">
+        <item >5/11/2014 05:30 PM</item>
+        <item >G5/11/2014 07:30 PM</item>
+        <item >5/12/2014 07:38 AM</item>
+        <item >5/13/2014 07:06 AM</item>
+        <item >5/13/2014 09:33 PMt</item>
+        <item >5/14/2014 04:33 PM</item>
     </string-array>
 
     <string-array name="sampleF1_array">
