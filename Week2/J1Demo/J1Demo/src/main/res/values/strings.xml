@@ -7,5 +7,46 @@
     <string name="submit">Submit</string>
     <string name="tweet">Tweet:</string>
 `   <string name="enter_tweet"><i>Enter Tweet</i></string>
+    <string name="post1"><i>I am going to eat at Subway today</i></string>
+    <string name="date1"><i>5/11/2014 10:34 AM</i></string>
+
+    <string-array name="choices_array">
+        <item >Feed</item>
+        <item >Followers</item>
+        <item >Following</item>
+    </string-array>
+
+    <string-array name="sampleFeed_array">
+        <item >"Going to dinner at Subway
+            5/11/2014 05:30 PM</item>
+        <item >Going to the Gym
+            5/11/2014 07:30 PM</item>
+        <item >Homework Grind
+            5/12/2014 07:38 AM</item>
+        <item >Struggling with Enums and Classes
+            5/13/2014 07:06 AM</item>
+        <item >OMG the season finale of S.H.I.E.L.D. was amazing
+            5/13/2014 09:33 PM</item>
+        <item >Date Night
+            5/14/2014 04:33 PM</item>
+    </string-array>
+
+    <string-array name="sampleF1_array">
+        <item >Robert</item>
+        <item >Cynthia</item>
+        <item >Michael</item>
+        <item >Alexis</item>
+        <item >Johnny</item>
+        <item >Pauline</item>
+    </string-array>
+
+    <string-array name="sampleF2_array">
+        <item >Dave</item>
+        <item >Donna</item>
+        <item >Mark</item>
+        <item >Andrea</item>
+        <item >Luke</item>
+        <item >Alisha</item>
+    </string-array>
 
 </resources>

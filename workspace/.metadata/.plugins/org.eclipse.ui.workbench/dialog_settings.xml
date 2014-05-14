@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="1600" key="dialogWidth"/>
-		<item value="900" key="dialogHeight"/>
+		<item value="1200" key="dialogWidth"/>
+		<item value="675" key="dialogHeight"/>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.commands"/>
 		</list>
 		<list key="textArray">
-			<item value="color"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.ui.editors.revisions.rendering.cycle"/>
 		</list>
 		<list key="textEntries">
-			<item value="1"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">

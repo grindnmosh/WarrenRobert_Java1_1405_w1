@@ -19,8 +19,7 @@ Term 1405-->
         android:layout_alignParentStart="true"
         android:src="@drawable/tempimage"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_toLeftOf="@+id/textView" />
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +27,7 @@ Term 1405-->
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textView"
-        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
