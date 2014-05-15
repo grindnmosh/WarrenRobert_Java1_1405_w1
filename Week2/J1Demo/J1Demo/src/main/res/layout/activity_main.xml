@@ -1,6 +1,8 @@
-<!--Robert Warren
+<!--
+Robert Warren
 Java 1
-Term 1405-->
+Term 1405
+-->
 
 <LinearLayout
     android:orientation="vertical"
@@ -11,19 +13,23 @@ Term 1405-->
     android:focusableInTouchMode="true"
     android:weightSum="1">
 
+    <!-- create 1st required adapter -->
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/choices"/>
 
+    <!-- create independent Linear View for List View to try and implement a way to adjust screen for keyboard adjustment -->
+    <!-- this will also keep the list view from overtaking the new tweet section -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="387dp"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:weightSum="1"
-        android:layout_weight="0.90">
+        android:layout_weight="0.99">
 
+        <!-- create 2nd required adapter -->
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,12 +38,14 @@ Term 1405-->
 
     </LinearLayout>
 
+    <!-- horizontal layout for the new tweet section of the app -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:weightSum="1">
 
+        <!-- creates label defining section and may be removed in furthe builds for a cleaner look -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,16 +53,18 @@ Term 1405-->
             android:text="@string/tweet"
             android:id="@+id/tweeter" />
 
+        <!-- edit text field to allow entry of a new tweet -->
         <EditText
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/twitText"
             android:inputType="textAutoCorrect"
             android:hint="@string/enter_tweet"
             android:selectAllOnFocus="true"
-            android:layout_weight="1.05" />
+            android:layout_weight="0.99" />
 
 
+        <!-- the submit button that will allow the event to send a new tweet to the feed on the network -->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

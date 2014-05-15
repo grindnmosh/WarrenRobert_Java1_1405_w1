@@ -6,6 +6,7 @@ package com.grindesign.listView;
 
 
 public class enumFile {
+    //create enum lo create JSON Object from
     public enum Feeds {
         feed1("Going to dinner at Subway", "5/11/2014 05:30 PM"),
         feed2("Going to the Gym", "5/11/2014 07:30 PM"),
@@ -15,20 +16,23 @@ public class enumFile {
         feed6("Date Night", "5/14/2014 04:33 PM");
 
 
-
+        //define strings to pull out
         private String posting;
         private String dated;
 
+        //define string placement in the enum
         private Feeds(String f, String d) {
             this.posting = f;
             this.dated = d;
 
         }
 
+        //set and return the posting
         public String setPosting() {
             return posting;
         }
 
+        //set and return the date
         public String setDated() {
             return dated;
         }
