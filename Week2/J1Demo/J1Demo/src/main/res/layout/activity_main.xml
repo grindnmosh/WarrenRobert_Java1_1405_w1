@@ -43,7 +43,8 @@ Term 1405
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="38dp"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:id="@+id/tweetBox">
 
         <!-- creates label defining section and may be removed in furthe builds for a cleaner look -->
         <TextView

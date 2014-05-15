@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -35,6 +36,7 @@ public class MainActivity extends Activity {
 
         //initializing constants
         Spinner s = (Spinner) findViewById(R.id.choices);
+        final View tb = findViewById(R.id.tweetBox);
         final ListView lv = (ListView) findViewById(R.id.mainList);
         final Button sub = (Button) findViewById(R.id.submit);
         final EditText edit = (EditText) findViewById(R.id.twitText);
@@ -59,6 +61,9 @@ public class MainActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (choiceItems[position].equals("Feed")) {
 
+                    //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
+                    tb.setVisibility(view.VISIBLE);
+
                     //define adapter name
                     ArrayAdapter<String> mainListAdapter;
 
@@ -82,6 +87,9 @@ public class MainActivity extends Activity {
 
                 } else if (choiceItems[position].equals("Followers")) {
 
+                    //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
+                    tb.setVisibility(view.GONE);
+
                     //define adapter name
                     ArrayAdapter<String> mainListAdapter;
 
@@ -95,6 +103,9 @@ public class MainActivity extends Activity {
                     fm.Toasty("Here's Your " + choiceItems[position]);
 
                 } else if (choiceItems[position].equals("Following")) {
+
+                    //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
+                    tb.setVisibility(view.GONE);
 
                     //define adapter name
                     ArrayAdapter<String> mainListAdapter;
