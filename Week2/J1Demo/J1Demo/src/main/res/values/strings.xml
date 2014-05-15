@@ -7,8 +7,7 @@
     <string name="submit">Submit</string>
     <string name="tweet">Tweet:</string>
 `   <string name="enter_tweet"><i>Enter Tweet</i></string>
-    <string name="post1"><i>I am going to eat at Subway today</i></string>
-    <string name="date1"><i>5/11/2014 10:34 AM</i></string>
+
 
     <string-array name="choices_array">
         <item >Feed</item>

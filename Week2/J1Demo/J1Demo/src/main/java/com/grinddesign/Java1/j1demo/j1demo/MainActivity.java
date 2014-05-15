@@ -10,10 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import com.grindesign.listView.FeedMe;
-import com.grindesign.listView.enumFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,6 @@ public class MainActivity extends Activity {
     String[] choiceItems;
     String[] followerItems;
     String[] followingItems;
-    String[] feedItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,8 @@ public class MainActivity extends Activity {
         //initializing constants
         Spinner s = (Spinner) findViewById(R.id.choices);
         final ListView lv = (ListView) findViewById(R.id.mainList);
+        final Button sub = (Button) findViewById(R.id.submit);
+        final EditText edit = (EditText) findViewById(R.id.twitText);
         twitCon = this;
         choiceItems = getResources().getStringArray(R.array.choices_array);
         followerItems = getResources().getStringArray(R.array.sampleF1_array);
@@ -58,7 +60,6 @@ public class MainActivity extends Activity {
                     FeedMe fm2 = new FeedMe(twitCon);
                     List<String> eatery = new ArrayList<String>();
                     eatery.addAll(fm2.loadArray());
-
                     mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1,  eatery);
                     lv.setAdapter(mainListAdapter);
                     fm.Toasty("Just Here To " + choiceItems[position]);
@@ -83,7 +84,22 @@ public class MainActivity extends Activity {
             }
         });
 
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (edit.getText().length() == 0) {
 
+                    fm.Toasty("Please enter a tweet");
+
+                }
+                else {
+                    fm.Toasty("Your Tweet would have been submitted if this were week 3");
+                    edit.setText("");
+                }
+
+            }
+
+        });
 
 
 
