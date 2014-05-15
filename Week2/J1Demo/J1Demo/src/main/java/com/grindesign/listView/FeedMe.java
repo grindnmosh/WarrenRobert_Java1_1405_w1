@@ -5,52 +5,100 @@ package com.grindesign.listView;
 //Term 1405
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
-
-
-/**
- * Created by 1LoveCyn on 5/13/14.
- */
+import java.util.ArrayList;
 
 
 public class FeedMe {
 
-        //feeding("Going to dinner at Subway", "5/11/2014 05:30 PM"),
-        //dates("5/11/2014 05:30 PM", "5/11/2014 05:30 PM");
-
-
-
-
-Context feedCon;
+    Context feedCon;
 
     public FeedMe(Context context) {
         feedCon = context;
     }
 
-    public void Toasty(String str){
+    public void Toasty(String str) {
         Toast.makeText(feedCon, str, Toast.LENGTH_LONG).show();
     }
 
-    public static JSONObject buildJSON() {
+    public JSONObject buildJSON() {
+
 
         //create feed JSON Object
         JSONObject feedsObject = new JSONObject();
 
-        // create query JSON Object
-        JSONObject queryTheFeed = new JSONObject();
+        try {
+            // create query JSON Object
+            JSONArray queryTheFeed = new JSONArray();
+            //Log.i("object output ", "build log");
+            enumFile ef3 = new enumFile();
 
-        //cycle through enums with for loop... need help with enums
+            // Create Feeds Object fo query
+            for (enumFile.Feeds feed : enumFile.Feeds.values()) {
+                //Log.i("object output ", "build inside loop log");
+                // create post object
+                JSONObject postingObject = new JSONObject();
 
-        return null;
+                //load postingObject
+                postingObject.put("posting", feed.setPosting());
+                postingObject.put("dated", feed.setDated());
+                queryTheFeed.put(postingObject);
+
+            }
+
+            //add the query to the feedsobject
+            feedsObject.put("query", queryTheFeed);
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return feedsObject;
+
     }
 
-    public static String readJSON (String selected) {
+    public ArrayList loadArray() {
+        Log.i("object output ", "LoadArray Hit");
+        String post, when;
+        String result = null;
 
 
 
-        return null;
+
+        ArrayList<String> posts = new ArrayList<String>();
+
+
+        try {
+
+            JSONObject readObject = buildJSON();
+            Log.i("object output ", "enter the try");
+            JSONArray JA = readObject.getJSONArray("query");
+            Log.i("object output ", "length test" + JA.length());
+            for (int i = 0; i < JA.length(); i++) {
+
+                Log.i("object output ", "test log");
+                JSONObject JO = JA.getJSONObject(i);
+                String posting = JO.getString("posting");
+                String dated = JO.getString("dated");
+                Log.i("object output ", posting);
+                Log.i("object output ", dated);
+                posts.add(posting);
+
+
+
+
+
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return posts;
+
     }
-
 
 }

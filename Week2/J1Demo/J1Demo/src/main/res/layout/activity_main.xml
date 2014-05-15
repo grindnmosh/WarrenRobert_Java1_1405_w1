@@ -19,21 +19,23 @@ Term 1405-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="440dp"
+        android:layout_height="387dp"
         android:layout_gravity="center_horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_weight="0.90">
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/mainList"
             android:choiceMode="singleChoice" />
+
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="38dp"
         android:weightSum="1">
 
         <TextView
@@ -44,13 +46,13 @@ Term 1405-->
             android:id="@+id/tweeter" />
 
         <EditText
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/twitText"
             android:inputType="textAutoCorrect"
             android:hint="@string/enter_tweet"
             android:selectAllOnFocus="true"
-            android:layout_weight="1.01" />
+            android:layout_weight="1.05" />
 
 
         <Button
@@ -58,5 +60,7 @@ Term 1405-->
             android:layout_height="wrap_content"
             android:text="@string/submit"
             android:id="@+id/submit" />
+
     </LinearLayout>
+
 </LinearLayout>

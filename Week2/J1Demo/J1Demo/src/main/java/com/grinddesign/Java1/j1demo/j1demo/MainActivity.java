@@ -12,9 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
-
 import com.grindesign.listView.FeedMe;
+import com.grindesign.listView.enumFile;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
     Context twitCon;
@@ -35,39 +37,38 @@ public class MainActivity extends Activity {
         final ListView lv = (ListView) findViewById(R.id.mainList);
         twitCon = this;
         choiceItems = getResources().getStringArray(R.array.choices_array);
-        feedItems = getResources().getStringArray(R.array.sampleFeed_array);
         followerItems = getResources().getStringArray(R.array.sampleF1_array);
         followingItems = getResources().getStringArray(R.array.sampleF2_array);
 
         final FeedMe fm = new FeedMe(this);
 
-
         //spinner adapter
         ArrayAdapter<String> choicesAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_spinner_item, choiceItems);
+
 
         //use UI Spinner and load it
         s.setAdapter(choicesAdapter);
 
+
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (choiceItems[position].equals("Feed"))
-                {
+                if (choiceItems[position].equals("Feed")) {
                     ArrayAdapter<String> mainListAdapter;
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, feedItems);
+                    FeedMe fm2 = new FeedMe(twitCon);
+                    List<String> eatery = new ArrayList<String>();
+                    eatery.addAll(fm2.loadArray());
+
+                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1,  eatery);
                     lv.setAdapter(mainListAdapter);
                     fm.Toasty("Just Here To " + choiceItems[position]);
-                }
-                else if (choiceItems[position].equals("Followers"))
-                {
+                } else if (choiceItems[position].equals("Followers")) {
 
                     ArrayAdapter<String> mainListAdapter;
                     mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followerItems);
                     lv.setAdapter(mainListAdapter);
                     fm.Toasty("Here's Your " + choiceItems[position]);
-                }
-                else if (choiceItems[position].equals("Following"))
-                {
+                } else if (choiceItems[position].equals("Following")) {
                     ArrayAdapter<String> mainListAdapter;
                     mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followingItems
                     );
@@ -82,56 +83,12 @@ public class MainActivity extends Activity {
             }
         });
 
-        ArrayAdapter<String> mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, feedItems);
-        lv.setAdapter(mainListAdapter);
+
+
+
 
 
     }
-
-
- /*   private Spinner BuildSpinner() {
-        //initializing constants
-        Spinner s = (Spinner) findViewById(R.id.choices);
-        twitCon = this;
-        choiceItems = getResources().getStringArray(R.array.choices_array);
-
-        //spinner adapter
-        ArrayAdapter choicesAdapter = new ArrayAdapter(twitCon, android.R.layout.simple_spinner_item, choiceItems);
-
-        s.setAdapter(choicesAdapter);
-
-
-        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (choiceItems[position].equals("Feed"))
-                {
-                    Toast.makeText(twitCon, "Just Here To " + choiceItems[position], Toast.LENGTH_LONG).show();
-                }
-                else if (choiceItems[position].equals("Followers"))
-                {
-                    Toast.makeText(twitCon, "Here's Your " + choiceItems[position], Toast.LENGTH_LONG).show();
-                }
-                else if (choiceItems[position].equals("Following"))
-                {
-                    Toast.makeText(twitCon, "Who You Are " + choiceItems[position], Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        ArrayAdapter<String> mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, choiceItems);
-        lv.setAdapter(mainListAdapter);
-
-        Spinner vS = Not sure what to return or how to call it to run this off function
-
-        return vS;
-
-    }*/
-
-
 }
+
+
