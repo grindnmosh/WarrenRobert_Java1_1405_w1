@@ -1,16 +1,11 @@
 package com.grindesign.listView;
 
-//Robert Warren
-//Java 1
-//Term 1405
-
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.grinddesign.Java1.j1demo.j1demo.MainActivity;
 
@@ -33,21 +28,18 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
-public class FeedMe {
 
 
-    Context feedCon;
+public class Followers {
+    Context followerCon;
     static String TAG = "NETWORK DATA - FeedMe";
-    public FeedMe(Context context) {
-        feedCon = context;
+    public Followers(Context context) {
+
+        followerCon = context;
     }
 
-    public void Toasty(String str) {
-        Toast.makeText(feedCon, str, Toast.LENGTH_LONG).show();
-    }
-
-    public boolean twitThis() {
-        ConnectivityManager cm = (ConnectivityManager) feedCon.getSystemService(Context.CONNECTIVITY_SERVICE);
+    public boolean follThis() {
+        ConnectivityManager cm = (ConnectivityManager) followerCon.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         if (netInfo != null && netInfo.isConnectedOrConnecting()) {
             new loadTwitterToken().execute();
@@ -66,15 +58,11 @@ public class FeedMe {
 
     static final String twitterAPISECRET = "H1LsT1XpV72lTkwZXuZebrI6uIw9FRW46jbMaPGg5ymwHTOGbC";
 
-    static final String twitterAPIurl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=";
+    static final String twitterAPIurl = "https://api.twitter.com/1.1/followers/list.json?screen_name=";
 
     static final String screenName = "grindnmosh";
 
-    static final int tweets2Return = 20;
-
-
-    static String tweeterURL = twitterAPIurl + screenName
-            + "&include_rts=1&count=" + tweets2Return;
+    static String tweeterURL = twitterAPIurl + screenName;
 
     String twitterToken;
     String jsonTokenStream;
@@ -89,7 +77,7 @@ public class FeedMe {
 
         @Override
         protected Integer doInBackground(Void... params) {
-            //Log.i("test", "in BG");
+           // Log.i("test", "in BG");
 
             try {
                 DefaultHttpClient httpclient = new DefaultHttpClient(
@@ -141,7 +129,7 @@ public class FeedMe {
                 JSONObject root = new JSONObject(jsonTokenStream);
                 twitterToken = root.getString("access_token");
             } catch (Exception e) {
-                Log.e("loadTwitterToken", "onPost Error:" + e.getMessage());
+                //Log.e("loadTwitterToken", "onPost Error:" + e.getMessage());
             }
 
             new loadTwitterFeed().execute();
@@ -177,7 +165,7 @@ public class FeedMe {
                     builder.append(line);
 
                 }
-                //Log.d("this is my array", "arr: " + builder);
+                //Log.d("this is my array", "arr110: " + builder);
                 //feedsObject.put("query", builder);
                 feedsObject = new JSONArray(builder.toString());
             } catch (ClientProtocolException e) {
@@ -204,9 +192,10 @@ public class FeedMe {
 
             //Log.i("test", "enter a try");
             posts = new ArrayList<String>();
-            //JSONObject tweetArray =  result.getJSONObject(0);
-            //Log.d("this is my array", "arr30: " + result.toString());
             try {
+                JSONObject tweetObj =  result.getJSONObject(0);
+                //JSONArray tweetArray = result.getJSONObject(0).getJSONArray("users");
+                //Log.d("this is my array", "arr120: " + result.toString());
                 for (int t=0; t<result.length(); t++) {
                     StringBuilder sb = new StringBuilder();
                     //Log.i("test", "enter a ray");
@@ -214,7 +203,7 @@ public class FeedMe {
                     //Log.i("test", "enter a ray2");
                     //sb.append(tweetObject.getString("from_user")+": ");
                     try {
-                        sb.append(tweetObject.getString("text"));
+                        sb.append(tweetObject.getString("name"));
                         sb.append("\n");
                         //Log.i("test", "enter a ray3");
                     } catch (JSONException e) {
@@ -222,11 +211,11 @@ public class FeedMe {
                         sb.append("any random text");
                     }
                     String posting = sb.toString();
-                    MainActivity.testArray.add(posting);
-                    //Log.d("this is my array", "arr45: " + MainActivity.testArray.toString());
+                    MainActivity.testArray3.add(posting);
+                    //Log.d("this is my array", "arr130: " + MainActivity.testArray3.toString());
                 }
             } catch (JSONException e) {
-                Log.e("this is a JSON error", e.getMessage());
+                Log.e("this is a JSON error follower", e.getMessage());
                 e.printStackTrace();
             }
 
@@ -236,9 +225,4 @@ public class FeedMe {
 
     }
 
-
-
-
-
 }
-

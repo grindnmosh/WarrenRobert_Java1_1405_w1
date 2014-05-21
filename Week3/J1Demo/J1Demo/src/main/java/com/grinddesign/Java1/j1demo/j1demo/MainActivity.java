@@ -12,27 +12,41 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 
 import com.grindesign.listView.FeedMe;
+import com.grindesign.listView.Followers;
+import com.grindesign.listView.Friends;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends Activity {
     //declare gloabal variables
+    static String TAG = "NETWORK DATA - MAINACTIVITY";
     Context twitCon;
     String[] choiceItems;
     String[] followerItems;
     String[] followingItems;
+    //final TextView tv = (TextView) findViewById(R.id.tweeter);
+    public static ArrayList<String> testArray;
+    public static ArrayList<String> testArray2;
+    public static ArrayList<String> testArray3;
+    ArrayAdapter<String> mainListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //call layout
         setContentView(R.layout.activity_main);
+        final FeedMe fm = new FeedMe(this);
+        final Friends friends = new Friends(this);
+        final Followers foll = new Followers(this);
+        fm.twitThis();
+        friends.friendThis();
+        foll.follThis();
+
 
         //initializing constants
         Spinner s = (Spinner) findViewById(R.id.choices);
@@ -40,13 +54,15 @@ public class MainActivity extends Activity {
         final ListView lv = (ListView) findViewById(R.id.mainList);
         final Button sub = (Button) findViewById(R.id.submit);
         final EditText edit = (EditText) findViewById(R.id.twitText);
+
+        testArray = new ArrayList<String>();
+        testArray2 = new ArrayList<String>();
+        testArray3 = new ArrayList<String>();
+
         twitCon = this;
         choiceItems = getResources().getStringArray(R.array.choices_array);
         followerItems = getResources().getStringArray(R.array.sampleF1_array);
         followingItems = getResources().getStringArray(R.array.sampleF2_array);
-
-        //define FeedMe class to call Toasties
-        final FeedMe fm = new FeedMe(this);
 
         //spinner adapter
         ArrayAdapter<String> choicesAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_spinner_item, choiceItems);
@@ -61,23 +77,20 @@ public class MainActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (choiceItems[position].equals("Feed")) {
 
+
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
-                    tb.setVisibility(view.VISIBLE);
+                    tb.setVisibility(view.GONE);
 
-                    //define adapter name
-                    ArrayAdapter<String> mainListAdapter;
-
-                    //connect to class to gain access to array you created
-                    FeedMe fm2 = new FeedMe(twitCon);
 
                     //create your new arraylist
                     List<String> eatery = new ArrayList<String>();
 
                     //add all the array items from the class to the new list
-                    eatery.addAll(fm2.loadArray());
+                    eatery.addAll(testArray);
+
 
                     //create adapter calling on the dynamic array from FeedMe Class // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1,  eatery);
+                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, eatery);
 
                     //load adapter into listview
                     lv.setAdapter(mainListAdapter);
@@ -85,16 +98,14 @@ public class MainActivity extends Activity {
                     //populate toasty for the selected spinner item
                     fm.Toasty("Just Here To " + choiceItems[position]);
 
+
                 } else if (choiceItems[position].equals("Followers")) {
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
 
-                    //define adapter name
-                    ArrayAdapter<String> mainListAdapter;
-
                     //create adapter to load static string array into list view // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followerItems);
+                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray2);
 
                     //load adapter into listview
                     lv.setAdapter(mainListAdapter);
@@ -106,9 +117,6 @@ public class MainActivity extends Activity {
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
-
-                    //define adapter name
-                    ArrayAdapter<String> mainListAdapter;
 
                     //create adapter to load static string array into list view // this will be dynamic data in week 3 from the API
                     mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followingItems);
@@ -126,7 +134,7 @@ public class MainActivity extends Activity {
                 //do nothing at this time
             }
         });
-
+        //temporarily hiding till login auth can be implemented
         //on click for submit button // this button will be used to submit user dat back to the server in week 3
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,10 +163,6 @@ public class MainActivity extends Activity {
             }
 
         });
-
-
-
-
     }
 }
 
