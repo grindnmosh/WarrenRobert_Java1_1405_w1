@@ -24,7 +24,6 @@ import java.util.List;
 
 public class MainActivity extends Activity {
     //declare gloabal variables
-    static String TAG = "NETWORK DATA - MAINACTIVITY";
     Context twitCon;
     String[] choiceItems;
     String[] followerItems;
@@ -43,9 +42,7 @@ public class MainActivity extends Activity {
         final FeedMe fm = new FeedMe(this);
         final Friends friends = new Friends(this);
         final Followers foll = new Followers(this);
-        fm.twitThis();
-        friends.friendThis();
-        foll.follThis();
+
 
 
         //initializing constants
@@ -77,6 +74,7 @@ public class MainActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (choiceItems[position].equals("Feed")) {
 
+                    fm.twitThis();
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
@@ -96,10 +94,13 @@ public class MainActivity extends Activity {
                     lv.setAdapter(mainListAdapter);
 
                     //populate toasty for the selected spinner item
-                    fm.Toasty("Just Here To " + choiceItems[position]);
+                    //fm.Toasty("Just Here To " + choiceItems[position]);
 
 
                 } else if (choiceItems[position].equals("Followers")) {
+
+                    friends.friendThis();
+
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
@@ -111,21 +112,23 @@ public class MainActivity extends Activity {
                     lv.setAdapter(mainListAdapter);
 
                     //populate toasty for the selected spinner item
-                    fm.Toasty("Here's Your " + choiceItems[position]);
+                    //fm.Toasty("Here's Your " + choiceItems[position]);
 
                 } else if (choiceItems[position].equals("Following")) {
+
+                    foll.follThis();
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
 
                     //create adapter to load static string array into list view // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, followingItems);
+                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray3);
 
                     //load adapter into listview
                     lv.setAdapter(mainListAdapter);
 
                     //populate toasty for the selected spinner item
-                    fm.Toasty("Who You Are " + choiceItems[position]);
+                    //fm.Toasty("Who You Are " + choiceItems[position]);
                 }
             }
 

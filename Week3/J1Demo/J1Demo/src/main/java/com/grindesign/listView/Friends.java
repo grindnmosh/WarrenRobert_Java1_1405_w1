@@ -6,6 +6,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.grinddesign.Java1.j1demo.j1demo.MainActivity;
 
@@ -46,7 +47,7 @@ public class Friends {
 
         }
         else {
-            //if local data
+            Toast.makeText(friendCon, "Please connect to a network to get information", Toast.LENGTH_LONG).show();
             //else toast that there is no data and to check connection
             return false;
         }
@@ -64,11 +65,8 @@ public class Friends {
 
     String twitterToken;
     String jsonTokenStream;
-    JSONArray jsonFeed;
-    String[] tweetJSON;
     ArrayList<String> posts;
     StringBuilder builder;
-    ArrayList list;
     JSONArray friObject;
 
     //ASync

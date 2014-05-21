@@ -56,10 +56,13 @@ public class FeedMe {
 
         }
         else {
-            //if local data
+
+            Toast.makeText(feedCon, "Please connect to a network to get information", Toast.LENGTH_LONG).show();
             //else toast that there is no data and to check connection
             return false;
-        }
+            }
+
+
     }
 
     static final String twitterAPIKEY = "fQOl6VG5yKkqNegDJL6hz7NnX";
