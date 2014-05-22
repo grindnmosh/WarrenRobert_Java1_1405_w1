@@ -30,41 +30,55 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 
 public class FeedMe {
 
-
+    //set context
     Context feedCon;
+
+    //set TAG constant
     static String TAG = "NETWORK DATA - FeedMe";
+
+    //define Classes context
     public FeedMe(Context context) {
         feedCon = context;
     }
 
+    //Toast method to be able to easily assign toasts as needed throughout the app
     public void Toasty(String str) {
         Toast.makeText(feedCon, str, Toast.LENGTH_LONG).show();
     }
 
+    //test for connectivity
     public boolean twitThis() {
         ConnectivityManager cm = (ConnectivityManager) feedCon.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        //verify connectivity exists
         if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            new loadTwitterToken().execute();
+
+            //logout network type
             Log.i(TAG, netInfo.getTypeName());
+
+            //run code to get data from twitter
+            new loadTwitterToken().execute();
+
             return true;
 
         }
+        // alert user when there is no network connectivity
         else {
 
+            //toast that there is no data and to check connection
             Toast.makeText(feedCon, "Please connect to a network to get information", Toast.LENGTH_LONG).show();
-            //else toast that there is no data and to check connection
+
             return false;
-            }
+        }
 
 
     }
 
+    //set constants for OAUTH
     static final String twitterAPIKEY = "fQOl6VG5yKkqNegDJL6hz7NnX";
 
     static final String twitterAPISECRET = "H1LsT1XpV72lTkwZXuZebrI6uIw9FRW46jbMaPGg5ymwHTOGbC";
@@ -75,36 +89,38 @@ public class FeedMe {
 
     static final int tweets2Return = 20;
 
-
+    //Create URL to send when OAUTH is successful
     static String tweeterURL = twitterAPIurl + screenName
             + "&include_rts=1&count=" + tweets2Return;
 
+    //set global variables
     String twitterToken;
     String jsonTokenStream;
-    JSONArray jsonFeed;
-    String[] tweetJSON;
-    ArrayList<String> posts;
     StringBuilder builder;
-    ArrayList list = null;
 
-    //ASync
+    //start ASync calls
     protected class loadTwitterToken extends AsyncTask<Void, Void, Integer> {
 
+        //requires it to run in background
         @Override
         protected Integer doInBackground(Void... params) {
             //Log.i("test", "in BG");
 
             try {
+                //establish connection
                 DefaultHttpClient httpclient = new DefaultHttpClient(
                         new BasicHttpParams());
+                //prepare to get authenticated on twitter OAUTH URL
                 HttpPost httppost = new HttpPost(
                         "https://api.twitter.com/oauth2/token");
 
+                //encode and submit key and secret
                 String apiString = twitterAPIKEY + ":" + twitterAPISECRET;
                 String authorization = "Basic "
                         + Base64.encodeToString(apiString.getBytes(),
                         Base64.NO_WRAP);
 
+                //set up security to keep data hidden
                 httppost.setHeader("Authorization", authorization);
                 httppost.setHeader("Content-Type",
                         "application/x-www-form-urlencoded;charset=UTF-8");
@@ -113,6 +129,7 @@ public class FeedMe {
 
                 InputStream inputStream = null;
 
+                //get response from twitter with the access token and convert it to string and assign to token variable
                 HttpResponse response = httpclient.execute(httppost);
                 HttpEntity entity = response.getEntity();
 
@@ -136,6 +153,7 @@ public class FeedMe {
             }
         }
 
+        //process the token and instantiate the method to begin pulling the data
         @Override
         protected void onPostExecute(Integer result) {
             //Log.i("test", "in BG main 2");
@@ -147,6 +165,7 @@ public class FeedMe {
                 Log.e("loadTwitterToken", "onPost Error:" + e.getMessage());
             }
 
+            // execute getting the data
             new loadTwitterFeed().execute();
         }
     }
@@ -157,31 +176,43 @@ public class FeedMe {
         @Override
         protected JSONArray doInBackground(Void... params) {
             //Log.i("test", "in BG 2");
+
+            //assign constants
             BufferedReader reader = null;
             builder = new StringBuilder();
             JSONArray feedsObject = new JSONArray();
+
             try {
+                //recoonect with twitter this time to the url to pull the JSON data from
                 DefaultHttpClient httpClient = new DefaultHttpClient(
                         new BasicHttpParams());
+
+                //call the twitter JSON url we established earlier
                 HttpGet httpget = new HttpGet(tweeterURL);
+
+                // set up security
                 httpget.setHeader("Authorization", "Bearer " + twitterToken);
                 httpget.setHeader("Content-type", "application/json");
 
+                //get response from twitter
                 InputStream inputStream = null;
                 HttpResponse response = httpClient.execute(httpget);
                 HttpEntity entity = response.getEntity();
 
+                //grab the data from the response
                 inputStream = entity.getContent();
                 reader = new BufferedReader(
                         new InputStreamReader(inputStream, "UTF-8"), 8);
-                String line;
 
+                //pull the data from the buffer and build it into a string
+                String line;
                 while ((line = reader.readLine()) != null) {
                     builder.append(line);
 
                 }
                 //Log.d("this is my array", "arr: " + builder);
-                //feedsObject.put("query", builder);
+
+                //assign your string builder to your JSON Array
                 feedsObject = new JSONArray(builder.toString());
             } catch (ClientProtocolException e) {
                 e.printStackTrace();
@@ -205,29 +236,37 @@ public class FeedMe {
 
         protected void onPostExecute(JSONArray result) {
 
-            //Log.i("test", "enter a try");
-            posts = new ArrayList<String>();
-            //JSONObject tweetArray =  result.getJSONObject(0);
-            //Log.d("this is my array", "arr30: " + result.toString());
+
             try {
                 for (int t=0; t<result.length(); t++) {
+                    //reset stringbuilder each time
                     StringBuilder sb = new StringBuilder();
                     //Log.i("test", "enter a ray");
+
+                    //grab object at point in array that you have cycled to
                     JSONObject tweetObject = result.getJSONObject(t);
                     //Log.i("test", "enter a ray2");
-                    //sb.append(tweetObject.getString("from_user")+": ");
                     try {
+                        //grab the data you want to use
                         sb.append(tweetObject.getString("text"));
+
+                        //give it some space with a break
                         sb.append("\n");
                         //Log.i("test", "enter a ray3");
                     } catch (JSONException e) {
                         e.printStackTrace();
                         sb.append("any random text");
                     }
+                    //load the object pulled into a string
                     String posting = sb.toString();
+
+                    //assign it to the array for the list adapter
                     MainActivity.testArray.add(posting);
+
                     //Log.d("this is my array", "arr45: " + MainActivity.testArray.toString());
-                }
+                }//reset list adapter and force reload on listview
+
+                MainActivity.mainListAdapter.notifyDataSetChanged();
             } catch (JSONException e) {
                 Log.e("this is a JSON error", e.getMessage());
                 e.printStackTrace();

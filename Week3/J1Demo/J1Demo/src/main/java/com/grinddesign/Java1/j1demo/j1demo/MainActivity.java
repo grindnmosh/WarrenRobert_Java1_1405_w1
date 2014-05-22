@@ -20,7 +20,6 @@ import com.grindesign.listView.Followers;
 import com.grindesign.listView.Friends;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends Activity {
     //declare gloabal variables
@@ -28,20 +27,25 @@ public class MainActivity extends Activity {
     String[] choiceItems;
     String[] followerItems;
     String[] followingItems;
+
     //final TextView tv = (TextView) findViewById(R.id.tweeter);
     public static ArrayList<String> testArray;
     public static ArrayList<String> testArray2;
     public static ArrayList<String> testArray3;
-    ArrayAdapter<String> mainListAdapter;
+    public static ArrayAdapter<String> mainListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //call layout
         setContentView(R.layout.activity_main);
+
+        // instantiate classes to call within the app as needed
         final FeedMe fm = new FeedMe(this);
         final Friends friends = new Friends(this);
         final Followers foll = new Followers(this);
+
+
 
 
 
@@ -52,14 +56,16 @@ public class MainActivity extends Activity {
         final Button sub = (Button) findViewById(R.id.submit);
         final EditText edit = (EditText) findViewById(R.id.twitText);
 
+        // instatiating arrays to assign the parsed data to
         testArray = new ArrayList<String>();
         testArray2 = new ArrayList<String>();
         testArray3 = new ArrayList<String>();
 
+        // setup context
         twitCon = this;
+
+        //assign labels to spinner array
         choiceItems = getResources().getStringArray(R.array.choices_array);
-        followerItems = getResources().getStringArray(R.array.sampleF1_array);
-        followingItems = getResources().getStringArray(R.array.sampleF2_array);
 
         //spinner adapter
         ArrayAdapter<String> choicesAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_spinner_item, choiceItems);
@@ -68,27 +74,21 @@ public class MainActivity extends Activity {
         //use UI Spinner and load it
         s.setAdapter(choicesAdapter);
 
-
+        // set up on select methods to load data based on selected spinner item
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (choiceItems[position].equals("Feed")) {
 
+                    //call  timeline from grindnmosh's user feed
                     fm.twitThis();
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
 
-
-                    //create your new arraylist
-                    List<String> eatery = new ArrayList<String>();
-
-                    //add all the array items from the class to the new list
-                    eatery.addAll(testArray);
-
-
                     //create adapter calling on the dynamic array from FeedMe Class // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, eatery);
+                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray);
+
 
                     //load adapter into listview
                     lv.setAdapter(mainListAdapter);
@@ -99,8 +99,8 @@ public class MainActivity extends Activity {
 
                 } else if (choiceItems[position].equals("Followers")) {
 
-                    friends.friendThis();
-
+                    //call  followers from grindnmosh's twitter account
+                    foll.follThis();
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
@@ -116,7 +116,8 @@ public class MainActivity extends Activity {
 
                 } else if (choiceItems[position].equals("Following")) {
 
-                    foll.follThis();
+                    //call  friends from grindnmosh's twitter account
+                    friends.friendThis();
 
                     //determines visibilty of new tweet option to only be available on Feed //added Thursday morning because it bothered me that it was there even when not necessary
                     tb.setVisibility(view.GONE);
