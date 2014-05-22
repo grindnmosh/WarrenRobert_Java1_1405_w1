@@ -25,8 +25,6 @@ public class MainActivity extends Activity {
     //declare gloabal variables
     Context twitCon;
     String[] choiceItems;
-    String[] followerItems;
-    String[] followingItems;
 
     //final TextView tv = (TextView) findViewById(R.id.tweeter);
     public static ArrayList<String> testArray;
