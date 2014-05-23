@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Robert Warren
+Java 1
+Term 1405
+-->
+
+<resources>
+
+    <!--string identifiers-->
+    <string name="app_name">TwitTastic</string>
+    <string name="submit">Submit</string>
+    <string name="tweet">Tweet:</string>
+    <string name="enter_tweet"><i>Enter Tweet</i></string>
+
+
+    <!--array for the spinner to determine what view we will see-->
+    <string-array name="choices_array">
+        <item >Feed</item>
+        <item >Followers</item>
+        <item >Following</item>
+    </string-array>
+
+    <!--array for temp population of Follower names till API has been added week 3-->
+    <string-array name="sampleF1_array">
+        <item >Robert</item>
+        <item >Cynthia</item>
+        <item >Michael</item>
+        <item >Alexis</item>
+        <item >Johnny</item>
+        <item >Pauline</item>
+    </string-array>
+
+    <!--array for temp population of Following names till API has been added week 3-->
+    <string-array name="sampleF2_array">
+        <item >Dave</item>
+        <item >Donna</item>
+        <item >Mark</item>
+        <item >Andrea</item>
+        <item >Luke</item>
+        <item >Alisha</item>
+    </string-array>
+
+</resources>
