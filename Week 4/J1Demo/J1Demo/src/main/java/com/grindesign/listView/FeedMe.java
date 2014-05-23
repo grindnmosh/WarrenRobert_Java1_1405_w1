@@ -208,7 +208,6 @@ public class FeedMe {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     builder.append(line);
-
                 }
                 //Log.d("this is my array", "arr: " + builder);
 
