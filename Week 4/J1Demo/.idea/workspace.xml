@@ -43,11 +43,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe805f3-a3f7-4067-913a-604f293b1af4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Week3/J1Demo/.idea/libraries/appcompat_v7_19_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Week3/J1Demo/.idea/libraries/support_v4_19_1_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="J1Demo.iws" />
@@ -1737,7 +1732,11 @@
       <created>1400881681015</created>
       <updated>1400881681015</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added Week 4 copy to begin new iterations">
+      <created>1401110466000</created>
+      <updated>1401110466000</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
