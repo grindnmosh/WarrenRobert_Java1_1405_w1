@@ -30,6 +30,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 
 public class FeedMe {
@@ -209,7 +210,7 @@ public class FeedMe {
                 while ((line = reader.readLine()) != null) {
                     builder.append(line);
                 }
-                //Log.d("this is my array", "arr: " + builder);
+                Log.d("this is my array", "arr: " + builder);
 
                 //assign your string builder to your JSON Array
                 feedsObject = new JSONArray(builder.toString());
@@ -240,6 +241,9 @@ public class FeedMe {
                 for (int t=0; t<result.length(); t++) {
                     //reset stringbuilder each time
                     StringBuilder sb = new StringBuilder();
+                    StringBuilder url = new StringBuilder();
+                    StringBuilder crazy = new StringBuilder();
+                    ArrayList bundle = new ArrayList();
                     //Log.i("test", "enter a ray");
 
                     //grab object at point in array that you have cycled to
@@ -247,17 +251,28 @@ public class FeedMe {
                     //Log.i("test", "enter a ray2");
                     try {
                         //grab the data you want to use
+
                         sb.append(tweetObject.getString("text"));
+                        sb.append("\n");
+                        sb.append("\n");
+                        sb.append(tweetObject.getString("created_at"));
+                        sb.append("\n");
+
+                        //url.append(tweetObject.getString("profile_image_url_https"));
+
 
                         //give it some space with a break
-                        sb.append("\n");
-                        //Log.i("test", "enter a ray3");
+
+                        Log.i("test", "enter a ray3");
                     } catch (JSONException e) {
                         e.printStackTrace();
                         sb.append("any random text");
                     }
                     //load the object pulled into a string
                     String posting = sb.toString();
+                    String urlStr = url.toString();
+
+                    //CellAdapter.image.add(urlStr);
 
                     //assign it to the array for the list adapter
                     MainActivity.testArray.add(posting);
@@ -265,7 +280,7 @@ public class FeedMe {
                     //Log.d("this is my array", "arr45: " + MainActivity.testArray.toString());
                 }//reset list adapter and force reload on listview
 
-                MainActivity.mainListAdapter.notifyDataSetChanged();
+                MainActivity.postAdapter.notifyDataSetChanged();
             } catch (JSONException e) {
                 Log.e("this is a JSON error", e.getMessage());
                 e.printStackTrace();

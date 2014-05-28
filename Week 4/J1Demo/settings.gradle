@@ -1,1 +1,1 @@
-include ':J1Demo'
+include ':J1Demo', ':android-smart-image-view-1.0.0'

@@ -30,7 +30,12 @@ public class MainActivity extends Activity {
     public static ArrayList<String> testArray;
     public static ArrayList<String> testArray2;
     public static ArrayList<String> testArray3;
+    public static ArrayList<String> image;
+
     public static ArrayAdapter<String> mainListAdapter;
+    public static CellAdapter postAdapter;
+    public static FCellAdapter postAdapter2;
+    public static FCellAdapter2 postAdapter3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,11 +90,12 @@ public class MainActivity extends Activity {
                     tb.setVisibility(view.GONE);
 
                     //create adapter calling on the dynamic array from FeedMe Class // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray);
+                    //mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray);
+                    postAdapter = new CellAdapter(twitCon, R.layout.item_cell, testArray);
 
 
                     //load adapter into listview
-                    lv.setAdapter(mainListAdapter);
+                    lv.setAdapter(postAdapter);
 
                     //populate toasty for the selected spinner item
                     //fm.Toasty("Just Here To " + choiceItems[position]);
@@ -104,10 +110,10 @@ public class MainActivity extends Activity {
                     tb.setVisibility(view.GONE);
 
                     //create adapter to load static string array into list view // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray2);
+                    postAdapter2 = new FCellAdapter(twitCon, R.layout.item_fcell, testArray2);
 
                     //load adapter into listview
-                    lv.setAdapter(mainListAdapter);
+                    lv.setAdapter(postAdapter2);
 
                     //populate toasty for the selected spinner item
                     //fm.Toasty("Here's Your " + choiceItems[position]);
@@ -121,10 +127,10 @@ public class MainActivity extends Activity {
                     tb.setVisibility(view.GONE);
 
                     //create adapter to load static string array into list view // this will be dynamic data in week 3 from the API
-                    mainListAdapter = new ArrayAdapter<String>(twitCon, android.R.layout.simple_list_item_1, testArray3);
+                    postAdapter3 = new FCellAdapter2(twitCon, R.layout.item_fcell, testArray3);
 
                     //load adapter into listview
-                    lv.setAdapter(mainListAdapter);
+                    lv.setAdapter(postAdapter3);
 
                     //populate toasty for the selected spinner item
                     //fm.Toasty("Who You Are " + choiceItems[position]);

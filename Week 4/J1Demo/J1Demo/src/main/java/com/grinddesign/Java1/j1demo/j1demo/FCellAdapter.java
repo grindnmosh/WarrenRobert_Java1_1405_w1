@@ -5,11 +5,46 @@ package com.grinddesign.Java1.j1demo.j1demo;
 //Term 1405
 
 
+import android.app.Activity;
+import android.content.Context;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+public class FCellAdapter extends ArrayAdapter<String> {
+
+    private Context context;
+    private ArrayList<String> arrayLister  = MainActivity.testArray2;
+
+    public FCellAdapter(Context context, int resource, ArrayList<String> arrayLister) {
+
+        super(context, resource, arrayLister);
+        Log.i("cust", "adapterdude");
+        this.context = context;
+        this.arrayLister = arrayLister;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        Log.i("cust", "adapterdudette");
+
+        String s = arrayLister.get(position);
+
+        LayoutInflater blowUp = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+        View view = blowUp.inflate(R.layout.item_fcell, null);
 
 
-public class FCellAdapter {
-    public FCellAdapter() {
-        //this will be the custom class for the custom adapter for the follower and following lists
-        //this will be added in future classes
+        TextView tvMain = (TextView) view.findViewById(R.id.name);
+        tvMain.setText(s);
+
+
+        Log.i("cust", "ready to return");
+        //return super.getView(position, convertView, parent);
+        return view;
     }
 }

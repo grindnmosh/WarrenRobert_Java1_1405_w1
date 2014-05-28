@@ -258,7 +258,7 @@ public class Followers {
                     //Log.d("this is my array", "arr130: " + MainActivity.testArray3.toString());
                 }
                 //reset the adapter to load the new data
-                MainActivity.mainListAdapter.notifyDataSetChanged();
+                MainActivity.postAdapter2.notifyDataSetChanged();
             } catch (JSONException e) {
                 Log.e("this is a JSON error follower", e.getMessage());
                 e.printStackTrace();
