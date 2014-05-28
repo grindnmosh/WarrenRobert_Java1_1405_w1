@@ -201,7 +201,7 @@ public class Followers {
                     builder.append(line);
 
                 }
-                //Log.d("this is my array", "arr110: " + builder);
+                Log.d("this is my array", "arr110: " + builder);
 
                 //load object to object
                 JSONObject feedObj = new JSONObject(builder.toString());
@@ -233,11 +233,12 @@ public class Followers {
             //Log.i("test", "enter a try");
             try {
                 //loop through passed in array
-               for (int t=0; t<result.length(); t++) {
-                   //reset string builder each time
+                for (int t=0; t<result.length(); t++) {
+                    //reset string builder each time
                     StringBuilder sb = new StringBuilder();
+                    StringBuilder url = new StringBuilder();
                     //Log.i("test", "enter a ray");
-                   //grab the object from the current index in the array
+                    //grab the object from the current index in the array
                     JSONObject tweetObject = result.getJSONObject(t);
                     //Log.i("test", "enter a ray2");
                     //sb.append(tweetObject.getString("from_user")+": ");
@@ -247,15 +248,24 @@ public class Followers {
                         //give it a break
                         sb.append("\n");
                         //Log.i("test", "enter a ray3");
+
+                        url.append(tweetObject.getString("profile_image_url"));
+
+                        Log.i("urlf", url.toString());
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                         sb.append("any random text");
                     }
-                   //assign the desired data to a string
+
+                    //assign the desired data to a string
                     String posting = sb.toString();
-                   //add to the array for the adapter
+                    String img = url.toString();
+
+                    //add to the array for the adapter
                     MainActivity.testArray2.add(posting);
-                    //Log.d("this is my array", "arr130: " + MainActivity.testArray3.toString());
+                    MainActivity.image2.add(img);
+                    Log.d("this is my array", "arr urlf 130: " + MainActivity.image2.toString());
                 }
                 //reset the adapter to load the new data
                 MainActivity.postAdapter2.notifyDataSetChanged();

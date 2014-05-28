@@ -235,6 +235,7 @@ public class Friends {
                 for (int t=0; t<result.length(); t++) {
                     //reset string builder each time
                     StringBuilder sb = new StringBuilder();
+                    StringBuilder url = new StringBuilder();
                     //Log.i("test", "enter a ray");
                     //grab the object from the current index in the array
                     JSONObject tweetObject = result.getJSONObject(t);
@@ -246,14 +247,21 @@ public class Friends {
                         //give it a break
                         sb.append("\n");
                         //Log.i("test", "enter a ray3");
+                        url.append(tweetObject.getString("profile_image_url"));
+
+                        Log.i("urlf", url.toString());
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                         sb.append("any random text");
                     }
+
                     //assign the desired data to a string
                     String posting = sb.toString();
+                    String img = url.toString();
                     //add to the array for the adapter
                     MainActivity.testArray3.add(posting);
+                    MainActivity.image3.add(img);
                     //Log.d("this is my array", "arr130: " + MainActivity.testArray3.toString());
                 }
                 //reset the adapter to load the new data

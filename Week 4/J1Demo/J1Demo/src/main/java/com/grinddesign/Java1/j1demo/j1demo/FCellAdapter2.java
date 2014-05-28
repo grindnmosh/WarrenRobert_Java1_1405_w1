@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.loopj.android.image.SmartImageView;
+
 import java.util.ArrayList;
 
 public class FCellAdapter2 extends ArrayAdapter<String> {
@@ -33,11 +35,14 @@ public class FCellAdapter2 extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup parent) {
         Log.i("cust", "adapterdudette");
 
+        String i = MainActivity.image3.get(position);
         String s = arrayLister.get(position);
 
         LayoutInflater blowUp = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = blowUp.inflate(R.layout.item_fcell, null);
 
+        SmartImageView myImage = (SmartImageView) view.findViewById(R.id.my_image);
+        myImage.setImageUrl(i);
 
         TextView tvMain = (TextView) view.findViewById(R.id.name);
         tvMain.setText(s);

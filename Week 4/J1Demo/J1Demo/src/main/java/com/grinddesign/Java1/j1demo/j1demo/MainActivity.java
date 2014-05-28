@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
     public static ArrayList<String> testArray2;
     public static ArrayList<String> testArray3;
     public static ArrayList<String> image;
+    public static ArrayList<String> image2;
+    public static ArrayList<String> image3;
 
     public static ArrayAdapter<String> mainListAdapter;
     public static CellAdapter postAdapter;
@@ -63,6 +65,9 @@ public class MainActivity extends Activity {
         testArray = new ArrayList<String>();
         testArray2 = new ArrayList<String>();
         testArray3 = new ArrayList<String>();
+        image = new ArrayList<String>();
+        image2 = new ArrayList<String>();
+        image3 = new ArrayList<String>();
 
         // setup context
         twitCon = this;

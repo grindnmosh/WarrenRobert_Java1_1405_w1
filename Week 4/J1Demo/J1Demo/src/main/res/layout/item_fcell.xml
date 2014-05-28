@@ -13,17 +13,16 @@ Term 1405
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- define the image view layout where the profile image will appear -->
-    <ImageView
+    <com.loopj.android.image.SmartImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/proPic"
+        android:id="@+id/my_image"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/tempimage"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:longClickable="true" />
+        android:layout_marginBottom="10dp" />
 
     <!-- define the Text view layout where the name will appear-->
     <TextView

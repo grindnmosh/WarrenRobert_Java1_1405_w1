@@ -30,7 +30,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 
 public class FeedMe {
@@ -210,7 +209,7 @@ public class FeedMe {
                 while ((line = reader.readLine()) != null) {
                     builder.append(line);
                 }
-                Log.d("this is my array", "arr: " + builder);
+                //Log.d("this is my array", "arr: " + builder);
 
                 //assign your string builder to your JSON Array
                 feedsObject = new JSONArray(builder.toString());
@@ -242,9 +241,7 @@ public class FeedMe {
                     //reset stringbuilder each time
                     StringBuilder sb = new StringBuilder();
                     StringBuilder url = new StringBuilder();
-                    StringBuilder crazy = new StringBuilder();
-                    ArrayList bundle = new ArrayList();
-                    //Log.i("test", "enter a ray");
+                    Log.i("test", "enter a ray");
 
                     //grab object at point in array that you have cycled to
                     JSONObject tweetObject = result.getJSONObject(t);
@@ -253,14 +250,16 @@ public class FeedMe {
                         //grab the data you want to use
 
                         sb.append(tweetObject.getString("text"));
+                        url.append(tweetObject.getJSONObject("user").getString("profile_image_url"));
+
+                        //Log.i("url", url.toString());
+
                         sb.append("\n");
                         sb.append("\n");
                         sb.append(tweetObject.getString("created_at"));
                         sb.append("\n");
 
-                        //url.append(tweetObject.getString("profile_image_url_https"));
-
-
+                        Log.i("url bs", sb.toString());
                         //give it some space with a break
 
                         Log.i("test", "enter a ray3");
@@ -272,12 +271,14 @@ public class FeedMe {
                     String posting = sb.toString();
                     String urlStr = url.toString();
 
-                    //CellAdapter.image.add(urlStr);
-
+                    MainActivity.image.add(urlStr);
+                    Log.i("test", "enter a ray img");
                     //assign it to the array for the list adapter
                     MainActivity.testArray.add(posting);
+                    Log.i("test", "enter a ray text");
 
-                    //Log.d("this is my array", "arr45: " + MainActivity.testArray.toString());
+
+                    //Log.d("this is my array", "arr45: " + MainActivity.image.toString());
                 }//reset list adapter and force reload on listview
 
                 MainActivity.postAdapter.notifyDataSetChanged();

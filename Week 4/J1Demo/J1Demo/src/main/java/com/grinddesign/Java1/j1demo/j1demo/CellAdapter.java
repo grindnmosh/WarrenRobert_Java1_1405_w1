@@ -35,14 +35,14 @@ public class CellAdapter extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup parent) {
         Log.i("cust", "adapter");
 
-        //String i = image.get(position);
+        String i = MainActivity.image.get(position);
         String s = arrayLister.get(position);
 
         LayoutInflater blowUp = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = blowUp.inflate(R.layout.item_cell, null);
 
         SmartImageView myImage = (SmartImageView) view.findViewById(R.id.my_image);
-        //myImage.setImageUrl(i);
+        myImage.setImageUrl(i);
 
         TextView tvMain = (TextView) view.findViewById(R.id.post);
         tvMain.setText(s);
