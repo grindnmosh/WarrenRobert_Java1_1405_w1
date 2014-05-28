@@ -26,6 +26,7 @@ Term 1405
 
     <!-- define the Text view layout where the name will appear-->
     <TextView
+        style="@style/TextAppearance.AppCompat.Base.SearchResult.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"

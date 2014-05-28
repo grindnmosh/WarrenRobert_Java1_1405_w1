@@ -23,6 +23,7 @@ Term 1405-->
 
     <!-- define the text view layout where the feed post will appear -->
     <TextView
+        style="@style/TextAppearance.AppCompat.Light.Base.SearchResult.Subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -30,7 +31,8 @@ Term 1405-->
         android:layout_marginTop="10dp"
         android:id="@+id/post"
         android:layout_toRightOf="@+id/my_image"
-        android:fontFamily="Times New Roman Bold"/>
+        android:fontFamily="Times New Roman"
+        android:textStyle="bold"/>
 
     <!-- define the text view layout where the date will appear -->
 </RelativeLayout>

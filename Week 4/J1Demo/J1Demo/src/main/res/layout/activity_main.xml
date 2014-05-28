@@ -15,6 +15,7 @@ Term 1405
 
     <!-- create 1st required adapter -->
     <Spinner
+        style="@style/TextAppearance.AppCompat.Widget.Base.DropDownItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/choices"/>
