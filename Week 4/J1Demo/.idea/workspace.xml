@@ -55,6 +55,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe805f3-a3f7-4067-913a-604f293b1af4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-smart-image-view-1.0.0/android-smart-image-view-1.0.0.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_smart_image_view_1_0_0.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/libs/android-smart-image-view-1.0.0.jar" afterPath="$PROJECT_DIR$/J1Demo/libs/android-smart-image-view-1.0.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/ic_launcher-web.png" afterPath="$PROJECT_DIR$/J1Demo/src/main/ic_launcher-web.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-hdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-mdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-xhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-xxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-hdpi/tempimage.png" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/drawable-hdpi/tempimage.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/.gitignore" afterPath="$PROJECT_DIR$/J1Demo/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/1LoveCyn.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/1LoveCyn.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/CellAdapter.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/CellAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/FCellAdapter.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/FCellAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/FCellAdapter2.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/FCellAdapter2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/FeedMe.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/FeedMe.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/Followers.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/Followers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/Friends.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/Friends.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/J1Demo-J1Demo.iml" afterPath="$PROJECT_DIR$/J1Demo/J1Demo-J1Demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo.iml" afterPath="$PROJECT_DIR$/J1Demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/MainActivity.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_19_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_19_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/build.gradle" afterPath="$PROJECT_DIR$/J1Demo/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/values-w820dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/enumFile.java" afterPath="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/enumFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew.bat" afterPath="$PROJECT_DIR$/gradlew.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew" afterPath="$PROJECT_DIR$/gradlew" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_fcell.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_fcell.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/menu/main.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/menu/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/proguard-rules.txt" afterPath="$PROJECT_DIR$/J1Demo/proguard-rules.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_19_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_19_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="J1Demo.iws" />
@@ -109,8 +160,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -121,8 +172,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2430">
-              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2085" max-vertical-offset="2745">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,11 +182,9 @@
       <file leaf-file-name="CellAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/CellAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70566946" vertical-offset="60" max-vertical-offset="900">
-              <caret line="43" column="78" selection-start-line="43" selection-start-column="78" selection-end-line="43" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.77804583" vertical-offset="0" max-vertical-offset="829">
+              <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,7 +192,7 @@
       <file leaf-file-name="item_cell.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.333333" vertical-offset="0" max-vertical-offset="615">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="615">
               <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
@@ -156,7 +205,7 @@
       <file leaf-file-name="FeedMe.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/FeedMe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3140" max-vertical-offset="4140">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3900" max-vertical-offset="4590">
               <caret line="260" column="26" selection-start-line="260" selection-start-column="26" selection-end-line="260" selection-end-column="26" />
               <folding />
             </state>
@@ -952,7 +1001,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4202309231000" />
+        <entry key="$PROJECT_DIR$" value="4203754182000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1296,7 +1345,6 @@
         <option value="$PROJECT_DIR$/J1Demo/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/TimelineService.java" />
         <option value="$PROJECT_DIR$/J1Demo/libs/android-smart-image-view-1.0.0/android-smart-image-view-1.0.0.iml" />
-        <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/CellAdapter.java" />
         <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/FeedMe.java" />
         <option value="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_fcell.xml" />
         <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/FCellAdapter.java" />
@@ -1305,6 +1353,7 @@
         <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/MainActivity.java" />
         <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grindesign/listView/Friends.java" />
         <option value="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml" />
+        <option value="$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/CellAdapter.java" />
       </list>
     </option>
   </component>
@@ -1359,6 +1408,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1589,7 +1639,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -1778,19 +1827,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1816,6 +1852,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2037,12 +2086,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="426" y="22" width="2134" height="1414" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2059,8 +2107,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17208412" sideWeight="0.49915683" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17208412" sideWeight="0.49915683" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32511556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2421,7 +2470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="29760">
           <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2457,8 +2505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2430">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2085" max-vertical-offset="2745">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2475,7 +2523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
           <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2497,7 +2544,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.333333" vertical-offset="0" max-vertical-offset="615">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="615">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
@@ -2508,11 +2555,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/J1Demo/src/main/java/com/grinddesign/Java1/j1demo/j1demo/CellAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70566946" vertical-offset="60" max-vertical-offset="900">
-          <caret line="43" column="78" selection-start-line="43" selection-start-column="78" selection-end-line="43" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.77804583" vertical-offset="0" max-vertical-offset="829">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
