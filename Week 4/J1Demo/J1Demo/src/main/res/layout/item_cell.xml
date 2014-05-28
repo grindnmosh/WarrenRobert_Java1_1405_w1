@@ -28,11 +28,9 @@ Term 1405-->
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="Med Text"
         android:id="@+id/post"
         android:layout_toRightOf="@+id/my_image"
-        android:fontFamily="Times New Roman Bold"
-        android:textAlignment="center" />
+        android:fontFamily="Times New Roman Bold"/>
 
     <!-- define the text view layout where the date will appear -->
 </RelativeLayout>
