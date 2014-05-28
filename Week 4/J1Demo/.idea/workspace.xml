@@ -55,7 +55,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe805f3-a3f7-4067-913a-604f293b1af4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml" afterPath="$PROJECT_DIR$/J1Demo/src/main/res/layout/item_cell.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="J1Demo.iws" />
@@ -2009,7 +2008,11 @@
       <created>1401251160902</created>
       <updated>1401251160902</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="custom cell update">
+      <created>1401251387984</created>
+      <updated>1401251387984</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2091,7 +2094,8 @@
     <MESSAGE value="xml update" />
     <MESSAGE value="updated to custom adapters. Working on images with smart imageview library&#10;" />
     <MESSAGE value="new classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="new classes" />
+    <MESSAGE value="custom cell update" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom cell update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
