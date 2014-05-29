@@ -5,12 +5,9 @@ package com.grindesign.listView;
 //Term 1405
 
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.grinddesign.Java1.j1demo.j1demo.MainActivity;
 
@@ -46,31 +43,8 @@ public class Followers {
     }
 
     //test for connectivity
-    public boolean follThis() {
-        ConnectivityManager cm = (ConnectivityManager) followerCon.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        //verify connectivity exists
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-
-            //logout network type
-            Log.i(TAG, netInfo.getTypeName());
-
-            //run code to get data from twitter
-            new loadTwitterToken().execute();
-
-            return true;
-
-        }
-        // alert user when there is no network connectivity
-        else {
-
-            //toast that there is no data and to check connection
-            Toast.makeText(followerCon, "Please connect to a network to get information", Toast.LENGTH_LONG).show();
-
-            return false;
-        }
-
-
+    public void follThis() {
+        new loadTwitterToken().execute();
     }
 
     //set constants for OAUTH

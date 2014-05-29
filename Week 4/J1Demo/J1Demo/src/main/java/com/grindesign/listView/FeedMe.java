@@ -5,8 +5,6 @@ package com.grindesign.listView;
 //Term 1405
 
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
@@ -51,31 +49,9 @@ public class FeedMe {
     }
 
     //test for connectivity
-    public boolean twitThis() {
-        ConnectivityManager cm = (ConnectivityManager) feedCon.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        //verify connectivity exists
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+    public void twitThis() {
 
-            //logout network type
-            Log.i(TAG, netInfo.getTypeName());
-
-            //run code to get data from twitter
-            new loadTwitterToken().execute();
-
-            return true;
-
-        }
-        // alert user when there is no network connectivity
-        else {
-
-            //toast that there is no data and to check connection
-            Toast.makeText(feedCon, "Please connect to a network to get information", Toast.LENGTH_LONG).show();
-
-            return false;
-        }
-
-
+        new loadTwitterToken().execute();
     }
 
     //set constants for OAUTH

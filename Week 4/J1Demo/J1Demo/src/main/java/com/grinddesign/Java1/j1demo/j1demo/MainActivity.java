@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.grinddesign.test.Connection;
 import com.grindesign.listView.FeedMe;
 import com.grindesign.listView.Followers;
 import com.grindesign.listView.Friends;
@@ -45,12 +46,14 @@ public class MainActivity extends Activity {
         //call layout
         setContentView(R.layout.activity_main);
 
+
         // instantiate classes to call within the app as needed
         final FeedMe fm = new FeedMe(this);
         final Friends friends = new Friends(this);
         final Followers foll = new Followers(this);
 
-
+        Connection con = new Connection(this);
+        con.connection();
 
 
 
